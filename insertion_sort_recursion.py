@@ -17,7 +17,10 @@ def insertion_sort_recursion_helper02(nums , j_run):
         return
 
     if nums[j_run + 1] > nums[j_run]:
-                swap(nums, j_run + 1 , j_run)
+        swap(nums, j_run + 1 , j_run)
+    else:
+      # 沒有比較快就直接return省掉後面的運算時間
+        return
     
     insertion_sort_recursion_helper02(nums , j_run -1 )
     
